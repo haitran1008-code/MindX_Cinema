@@ -1,7 +1,45 @@
 .title {
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 50px;
     text-align: center;
 }
-.login_button {
+.CreateUser {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 425px;
+    padding: 15px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container {
     display: flex;
     justify-content: center;
+}
+
+.p_title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.sub_btn_container {
+    display: flex;
+    justify-content: center;
+}
+
+.in {
+    padding: 10px 10px;
+}
+
+.sub  {
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.other {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
