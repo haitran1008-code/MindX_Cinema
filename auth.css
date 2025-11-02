@@ -1,0 +1,7 @@
+.title {
+    text-align: center;
+}
+.login_button {
+    display: flex;
+    justify-content: center;
+}
