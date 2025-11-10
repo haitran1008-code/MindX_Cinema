@@ -82,6 +82,14 @@ body {
     color: #45a56b;
 }
 
+#err {
+    margin: 0px;
+    padding: 12px;
+    padding-top: 0px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .submit {
     width: 100%;
     padding: 15px;

@@ -11,12 +11,13 @@
     <div class = 'form-heading'>Login</div>
     <div class = 'input-group'>
         <label class="label" for="email">Email</label>
-        <input required = '' placeholder="Enter your email" name = 'email' id = 'email' type="email">
+        <input required = '' placeholder="Enter your email" name = 'email' id = 'email' type="text">
     </div>
     <div class = 'input-group'>
         <label class="label" for="password">Password</label>
         <input required = '' placeholder="Enter your password" name="password" id="password" type="password">
     </div>
+    <p id = 'err'></p>
     <div class="forgot-password">
         <a href="#">Forgot password?</a>
     </div>
@@ -24,4 +25,35 @@
     <div class="signup-link">Don't have an account? <a href="#">Sign up</a></div>
 </form>
 </body>
+<script></script>
+<script>
+    const url = 'https://6767c148560fbd14f18e4f65.mockapi.io/user'
+    user = []
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            user = data
+        })
+
+    let form = document.querySelector('form')
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+
+        console.log(email, password)
+
+        // Kiểm tra
+        err = document.getElementById('err')
+
+        if (email == user[0].email && password == user[0].password) {
+            window.location.href = './index.html';
+        }
+        else {
+            err.innerHTML = 'Sai tài khoản hoặc mật khẩu';
+        }
+    })
+</script>
 </html>
